@@ -38,12 +38,10 @@ public class EventService {
         return "Registered Successfully!";
     }
 
-    // ✅ Get number of users registered
     public int getRegisteredCount(Long eventId) {
         return regRepo.countByEventId(eventId);
     }
 
-    // ✅ Get seats left
     public int getSeatsLeft(Long eventId) {
         Event event = eventRepo.findById(eventId).orElse(null);
 
